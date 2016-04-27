@@ -94,11 +94,11 @@ namespace AzureDocumentDB
                     {
                         // 2.
                         Console.WriteLine("2. Getting reference to Database");
-                        Database database = ReadOrCreateDatabase("QuickStarts");
+                        Database database = ReadOrCreateDatabase("documentDb");
 
                         // 3.
                         Console.WriteLine("3. Getting reference to a DocumentCollection");
-                        DocumentCollection collection = ReadOrCreateCollection(database.SelfLink, "Documents");
+                        DocumentCollection collection = ReadOrCreateCollection(database.SelfLink, "contoso");
 
                         // 4. 
                         Console.WriteLine("4. Inserting Documents");
@@ -109,8 +109,8 @@ namespace AzureDocumentDB
                         QueryDocuments(collection.SelfLink);
 
                         // 6. Finally cleanup by deleting the Database
-                        Console.WriteLine("6. Cleaning Up");
-                        Cleanup(database.SelfLink);
+                        //Console.WriteLine("6. Cleaning Up");
+                        //Cleanup(database.SelfLink);
                     }
                 }
                 catch (DocumentClientException docEx)
